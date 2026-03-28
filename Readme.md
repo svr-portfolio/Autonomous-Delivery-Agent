@@ -1,32 +1,77 @@
-AUTONOMOUS DELIVERY AGENT
+# AUTONOMOUS DELIVERY AGENT
 
-Over View Of The Project:- This project explores pathfinding algorithms (BFS, UCS, A*) in a grid. It models a world with static and moving obstacles, allowing an agent to plan and replan its path to a goal. It also includes tools to test and compare how efficiently these algorithms work on different maps.
+## Overview of the Project
+This project explores pathfinding algorithms such as BFS and A* in a grid-based environment.  
+It simulates a world with obstacles and allows an agent to find a path from a start position to a goal.  
 
-Features:- 
-   1. Grid Environment: A navigable 2D map with different terrains and obstacles.
-   2. Dynamic Obstacles: Moving blockages that change position.
-   3. Pathfinding Algorithms: Implements BFS, UCS, and A* to find paths.
-   4. Agent Replanning: The agent dynamically adjusts its path if obstacles appear.
-   5. Performance Metrics: Measures algorithm speed, path cost, and efficiency.
-   6. Map Generation: Creates various test maps.
-   7. Visualization: Plots experiment results for comparison.
-   
-Technologies used:-
-   1. Python 3.12
-   2. Google Colab
-   3. GitHub
-   4. Libraries :- 
-      2.1. pandas
-      2.2. matplotlib
-      2.3. seaborn
-      2.4. numpy
-      2.5. collections
-      2.6. heapq
-      2.7. time
-      2.8. random
+The project also compares algorithm performance based on execution time and number of nodes explored.
 
-Steps to run the project:- 
-   1. Copy the codes mentioned in the agent_pathfinding_env.py and main.py file in you VS Code or Google Colab
-   2. Make sure that all the required libraries are pre installed 
-   3. If not then install the required libraries
-   4. Run the main.py file
+---
+
+## Features
+
+### 1. Grid Environment
+- 2D grid-based map  
+- Supports obstacles  
+
+### 2. Pathfinding Algorithms
+- Breadth-First Search (BFS)  
+- A* Search Algorithm  
+
+### 3. Performance Comparison
+- Measures execution time  
+- Counts nodes expanded  
+
+### 4. Map Generation
+- Generates small, medium, and large maps  
+- Adjustable obstacle density  
+
+---
+
+## Technologies Used
+
+### Programming Language
+- Python 3.x  
+
+### Libraries
+- collections  
+- heapq  
+- time  
+- random  
+
+(No external libraries required)
+
+---
+
+## Steps to Run the Project
+
+### 1. Setup
+- Copy the code from:
+  - `main.py`  
+- Paste it into your IDE (VS Code / IDLE / terminal)
+
+### 2. Run the Code
+
+python main.py
+
+---
+
+## Output
+- Displays execution time for each algorithm  
+- Shows number of nodes explored  
+- Compares performance across different map sizes  
+
+---
+
+## Notes
+- Works on older Python versions (no external dependencies)  
+- Ensure Python is properly installed  
+- Recommended: Python 3.6 or higher  
+
+---
+
+## Future Improvements
+- Add visualization of grid and paths  
+- Include dynamic obstacles  
+- Add more algorithms like UCS and Dijkstra  
+- Integrate graphical interface  
