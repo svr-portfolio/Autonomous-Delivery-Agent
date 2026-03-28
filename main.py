@@ -2,8 +2,6 @@ import time
 import random
 import heapq
 from collections import deque
-import pandas as pd
-import matplotlib.pyplot as plt
 
 class Grid:
     def __init__(self,w,h):
@@ -18,7 +16,12 @@ class Grid:
 
     def neigh(self,x,y):
         d=[(1,0),(-1,0),(0,1),(0,-1)]
-        return [(x+dx,y+dy) for dx,dy in d if not self.block(x+dx,y+dy)]
+        res=[]
+        for dx,dy in d:
+            nx,ny=x+dx,y+dy
+            if not self.block(nx,ny):
+                res.append((nx,ny))
+        return res
 
 
 def gen(w,h,d):
@@ -32,13 +35,14 @@ def gen(w,h,d):
 
 def bfs(g):
     q=deque([(g.s,0)])
-    vis={g.s}
+    vis=set([g.s])
     count=0
     while q:
         n,c=q.popleft()
         count+=1
-        if n==g.t: return count
-        for nb in g.neigh(*n):
+        if n==g.t:
+            return count
+        for nb in g.neigh(n[0],n[1]):
             if nb not in vis:
                 vis.add(nb)
                 q.append((nb,c+1))
@@ -52,32 +56,27 @@ def astar(g):
     while pq:
         _,n=heapq.heappop(pq)
         count+=1
-        if n==g.t: return count
-        if n in vis: continue
+        if n==g.t:
+            return count
+        if n in vis:
+            continue
         vis.add(n)
-        for nb in g.neigh(*n):
+        for nb in g.neigh(n[0],n[1]):
             h=abs(nb[0]-g.t[0])+abs(nb[1]-g.t[1])
             heapq.heappush(pq,(h,nb))
     return count
 
 
-maps=[("small",gen(5,5,0.1)),("med",gen(15,15,0.2)),("large",gen(25,25,0.25))]
-alg=[("bfs",bfs),("astar",astar)]
+maps=[("small",gen(5,5,0.1)),("medium",gen(15,15,0.2)),("large",gen(25,25,0.25))]
+algorithms=[("BFS",bfs),("A*",astar)]
 
-rows=[]
+print("\nResults:\n")
+
 for mname,g in maps:
-    for aname,a in alg:
+    print("Map:",mname)
+    for aname,algo in algorithms:
         t1=time.time()
-        nodes=a(g)
+        nodes=algo(g)
         t2=time.time()
-        rows.append({"map":mname,"algo":aname,"time":(t2-t1)*1000,"nodes":nodes})
-
-df=pd.DataFrame(rows)
-print(df)
-
-plt.figure()
-for a in df["algo"].unique():
-    d=df[df["algo"]==a]
-    plt.plot(d["map"],d["time"],label=a)
-plt.legend()
-plt.show()
+        print("  ",aname,"| time(ms):",round((t2-t1)*1000,3),"| nodes:",nodes)
+    print()
