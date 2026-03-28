@@ -6,7 +6,6 @@ It simulates a world with obstacles and allows an agent to find a path from a st
 
 The project also compares algorithm performance based on execution time and number of nodes explored.
 
----
 
 ## Features
 
@@ -26,7 +25,6 @@ The project also compares algorithm performance based on execution time and numb
 - Generates small, medium, and large maps  
 - Adjustable obstacle density  
 
----
 
 ## Technologies Used
 
@@ -41,7 +39,6 @@ The project also compares algorithm performance based on execution time and numb
 
 (No external libraries required)
 
----
 
 ## Steps to Run the Project
 
@@ -54,21 +51,18 @@ The project also compares algorithm performance based on execution time and numb
 
 python main.py
 
----
 
 ## Output
 - Displays execution time for each algorithm  
 - Shows number of nodes explored  
 - Compares performance across different map sizes  
 
----
 
 ## Notes
 - Works on older Python versions (no external dependencies)  
 - Ensure Python is properly installed  
 - Recommended: Python 3.6 or higher  
 
----
 
 ## Future Improvements
 - Add visualization of grid and paths  
