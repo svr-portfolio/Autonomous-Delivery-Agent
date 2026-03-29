@@ -1,30 +1,27 @@
 # AUTONOMOUS DELIVERY AGENT
 
-## Overview of the Project
-This project explores pathfinding algorithms such as BFS and A* in a grid-based environment.  
-It simulates a world with obstacles and allows an agent to find a path from a start position to a goal.  
+## Project Overview
+This project is designed to implement pathfinding algorithms, such as BFS and A* Search Algorithm, within a grid-based world.  
+It is meant to mimic a world with obstacles, where an agent can find its path from a certain position to another.  
+The project is also designed to compare the efficiency of the algorithms using the execution time and the number of nodes expanded.  
 
-The project also compares algorithm performance based on execution time and number of nodes explored.
+## Project Features
 
-
-## Features
-
-### 1. Grid Environment
-- 2D grid-based map  
+### 1. Grid World
+- A 2D grid-based world  
 - Supports obstacles  
 
-### 2. Pathfinding Algorithms
-- Breadth-First Search (BFS)  
+### 2. Pathfinding Algorithm
+- Breadth-First Search Algorithm  
 - A* Search Algorithm  
 
-### 3. Performance Comparison
-- Measures execution time  
-- Counts nodes expanded  
+### 3. Algorithm Comparison
+- Compare the execution time  
+- Compare the number of expanded nodes  
 
 ### 4. Map Generation
-- Generates small, medium, and large maps  
-- Adjustable obstacle density  
-
+- Small, Medium, Large Maps  
+- Obstacle Density Variation
 
 ## Technologies Used
 
@@ -37,35 +34,30 @@ The project also compares algorithm performance based on execution time and numb
 - time  
 - random  
 
-(No external libraries required)
+### Step to Run the Project
 
-
-## Steps to Run the Project
-
-### 1. Setup
+### Step 1: Setup
 - Copy the code from:
-  - `main.py`  
+  - `main.py`
 - Paste it into your IDE (VS Code / IDLE / terminal)
 
-### 2. Run the Code
-
+### Step 2: Run the Code
+```bash
 python main.py
-
+```
 
 ## Output
-- Displays execution time for each algorithm  
-- Shows number of nodes explored  
-- Compares performance across different map sizes  
-
+- Displays execution time per algorithm  
+- Displays nodes explored  
+- Compares algorithms with different map sizes  
 
 ## Notes
-- Works on older Python versions (no external dependencies)  
-- Ensure Python is properly installed  
-- Recommended: Python 3.6 or higher  
-
+- Suitable for older versions of Python (does not require any extra libraries)  
+- Make sure Python is correctly installed  
+- Recommended Python version: 3.6 or above  
 
 ## Future Improvements
-- Add visualization of grid and paths  
+- Display a visualization of the grid and paths  
 - Include dynamic obstacles  
-- Add more algorithms like UCS and Dijkstra  
-- Integrate graphical interface  
+- Include more algorithms like UCS and Dijkstra  
+- Include a graphical interface
