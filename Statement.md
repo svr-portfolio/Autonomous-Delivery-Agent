@@ -1,45 +1,43 @@
 ## Problem Statement
 
-Delivery agents often face difficulty in determining the most cost-efficient and time-saving route to reach a destination. In real-world scenarios, environments are dynamic, with obstacles that may appear, disappear, or move over time. Traditional static pathfinding approaches fail to adapt to such changes, leading to inefficient routing and increased delivery time.
+Delivery agents sometimes face difficulties in finding the most efficient route that can reach a destination in the shortest time possible. In a real-world problem, the environment is constantly changing, meaning that obstacles can appear, disappear, or even move. The static pathfinding problem cannot adapt to a changing environment, making it difficult for a delivery agent to reach a destination as quickly as possible.
 
-This project aims to address this problem by implementing intelligent pathfinding algorithms that can efficiently compute optimal paths and dynamically adapt to changing environments.
+The objective of this project is to solve the problem by using intelligent algorithms that can efficiently solve the problem.
 
 
 ## Scope of the Project
 
-The scope of this project is to design and implement a grid-based environment in which an agent navigates from a start position to a goal position. The system demonstrates and compares various pathfinding algorithms such as **Breadth-First Search (BFS)**, **Uniform Cost Search (UCS)**, and **A\***.
-
-The project incorporates both static and dynamic obstacles to simulate real-world conditions. It also enables the agent to replan its path whenever the current path becomes blocked, ensuring robustness and adaptability.
+The scope of this project is to create a grid-based environment where a pathfinding agent can move from a start point to a goal point. The scope of this project includes the implementation of several pathfinding algorithms, including **Breadth-First Search (BFS)**, **Uniform Cost Search (UCS)**, and **A\***. This project includes static and dynamic obstacles, making it more efficient. The agent can also change its route when it finds a blockage in the current route.
 
 
 ## Target Users
 
-- Students studying artificial intelligence and algorithms  
-- Office workers involved in logistics and planning  
-- Residents using delivery services for food, groceries, or documents  
+- Students who want to learn more about artificial intelligence and algorithms  
+- Office workers who want a more efficient route for work  
+- Residents who want a more efficient route for food, groceries, and documents
 
 
 ## High-Level Features
 
 ### 1. Grid-Based Environment
-- Creates a virtual grid world  
-- Includes obstacles and navigable paths  
-- Defines start and goal positions  
+- A virtual grid world is formed  
+- Includes obstacles and paths  
+- Start and end points are defined  
 
 ### 2. Dynamic Obstacles
-- Introduces moving obstacles  
-- Simulates real-world unpredictability  
+- Introduces dynamic obstacles  
+- Emulates real-life uncertainties  
 
 ### 3. Pathfinding Algorithms
 - Implements BFS, UCS, and A*  
-- Finds efficient paths from start to goal  
+- Finds efficient paths from start to end  
 
 ### 4. Adaptive Replanning
-- Recalculates path when blocked  
-- Ensures continuous movement toward the goal  
+- Recomputes path when obstacles are encountered  
+- Ensures continuous movement towards the goal  
 
 ### 5. Performance Comparison
-- Compares algorithms based on:
+- Compares all algorithms on the basis of:  
   - Execution time  
   - Nodes explored  
-  - Overall efficiency  
+  - Efficiency
